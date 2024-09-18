@@ -21,6 +21,8 @@ class _HomePageState extends State<HomePage> {
   final scaffoldKey = GlobalKey<ScaffoldState>();
   @override
   Widget build(BuildContext context) {
+    final screenSize = MediaQuery.of(context).size;
+    final screenWidth = screenSize.width;
     return LayoutBuilder(builder: (context, constraints) {
       return Scaffold(
         key: scaffoldKey,
@@ -41,6 +43,51 @@ class _HomePageState extends State<HomePage> {
                   scaffoldKey.currentState?.openEndDrawer();
                 },
               ),
+            Container(
+              margin: EdgeInsets.symmetric(
+                horizontal: 20.0,
+              ),
+              height: screenSize.height / 1.2,
+              constraints: const BoxConstraints(minHeight: 350.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      const Text(
+                        "Hi,\nI'm Kshitij Patidar\nA Software Developer",
+                        style: TextStyle(
+                          fontSize: 26.0,
+                          height: 1.5,
+                          fontWeight: FontWeight.bold,
+                          color: CustomColor.whitePrimary,
+                        ),
+                      ),
+                      SizedBox(
+                        height: 15,
+                      ),
+                      SizedBox(
+                        width: 255,
+                        child: ElevatedButton(
+                          onPressed: () {},
+                          child: const Text(
+                            "Get In Touch",
+                            style: TextStyle(
+                              color: CustomColor.whitePrimary,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                  Image.asset(
+                    "assets/my_flutter_avatar.png",
+                    width: screenWidth / 2.75,
+                  ),
+                ],
+              ),
+            ),
             //SKILLS
             Container(
               height: 500,
