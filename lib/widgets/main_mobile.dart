@@ -16,7 +16,7 @@ class MainMobile extends StatelessWidget {
       ),
       height: screenHeight,
       constraints: BoxConstraints(
-        minHeight: 560.0,
+        minHeight: 585.0,
       ),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
@@ -33,18 +33,18 @@ class MainMobile extends StatelessWidget {
             blendMode: BlendMode.srcATop,
             child: Image.asset(
               "assets/my_flutter_avatar.png",
-              width: screenWidth,
+              width: screenWidth / 1.3,
             ),
           ),
           const SizedBox(
-            height: 30,
+            height: 20,
           ),
           //intro message
           const Text(
             "Hi,\nI'm Kshitij Patidar\nA Software Developer",
             style: TextStyle(
-              fontSize: 22.0,
-              height: 1.5,
+              fontSize: 21.0,
+              height: 1.3,
               fontWeight: FontWeight.bold,
               color: CustomColor.whitePrimary,
             ),

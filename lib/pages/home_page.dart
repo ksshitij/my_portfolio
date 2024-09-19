@@ -10,6 +10,9 @@ import 'package:my_portfolio/widgets/main_desktop.dart';
 import 'package:my_portfolio/widgets/main_mobile.dart';
 import 'package:my_portfolio/widgets/site_logo.dart';
 import 'package:my_portfolio/widgets/skills_desktop.dart';
+import 'package:my_portfolio/widgets/skills_mobile.dart';
+import 'package:my_portfolio/widgets/title_desktop.dart';
+import 'package:my_portfolio/widgets/title_mobile.dart';
 
 import '../widgets/header_desktop.dart';
 import '../widgets/header_mobile.dart';
@@ -56,7 +59,7 @@ class _HomePageState extends State<HomePage> {
 
             //SKILLS
             Container(
-              height: 500,
+              height: 490.0,
               width: screenWidth,
               padding: EdgeInsets.fromLTRB(25, 20, 25, 60),
               color: CustomColor.bgLight1,
@@ -64,20 +67,25 @@ class _HomePageState extends State<HomePage> {
                 mainAxisSize: MainAxisSize.min,
                 children: [
                   //TITLE
-                  Text(
-                    "What I Can Do",
-                    style: TextStyle(
-                      fontSize: 28,
-                      fontWeight: FontWeight.bold,
-                      color: CustomColor.whitePrimary,
+                  if (constraints.maxWidth >= kMedDesktopWidth)
+                    const TitleDesktop()
+                  else
+                    const TitleMobile(),
+
+                  if (constraints.maxWidth >= kMedDesktopWidth)
+                    const SizedBox(
+                      height: 90.0,
+                    )
+                  else
+                    const SizedBox(
+                      height: 18.0,
                     ),
-                  ),
-                  const SizedBox(
-                    height: 70.0,
-                  ),
 
                   //PLATFORMS AND SKILLS
-                  const SkillsDesktop(),
+                  if (constraints.maxWidth >= kMedDesktopWidth)
+                    const SkillsDesktop()
+                  else
+                    const SkillsMobile(),
                 ],
               ),
             ),

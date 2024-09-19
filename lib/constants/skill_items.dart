@@ -43,10 +43,6 @@ const List<Map> skillItems = [
     "title": "MySQL",
   },
   {
-    "img": "assets/dbms_icon.png",
-    "title": "DBMS",
-  },
-  {
     "img": "assets/linux_icon1.png",
     "title": "Linux",
   },
@@ -54,12 +50,4 @@ const List<Map> skillItems = [
     "img": "assets/Leetcode_logo.png",
     "title": "DSA",
   },
-  {
-    "img": "assets/javascript.png",
-    "title": "JS",
-  },
-  {
-    "img": "assets/python.png",
-    "title": "Python",
-  }
 ];
