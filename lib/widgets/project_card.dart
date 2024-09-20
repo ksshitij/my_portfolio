@@ -2,11 +2,15 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:my_portfolio/constants/colors.dart';
+import 'package:my_portfolio/utils/project_utils.dart';
+import 'dart:js' as js;
 
 class ProjectCardWidget extends StatelessWidget {
   const ProjectCardWidget({
     super.key,
+    required this.project,
   });
+  final ProjectUtils project;
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +28,7 @@ class ProjectCardWidget extends StatelessWidget {
         children: [
           //PROJECT
           Image.asset(
-            "",
+            project.image,
             height: 140,
             width: 250,
             fit: BoxFit.cover,
@@ -33,8 +37,8 @@ class ProjectCardWidget extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.fromLTRB(12, 15, 12, 12),
             child: Text(
-              "Title",
-              style: TextStyle(
+              project.title,
+              style: const TextStyle(
                 fontWeight: FontWeight.w600,
                 color: CustomColor.whitePrimary,
               ),
@@ -44,8 +48,8 @@ class ProjectCardWidget extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.fromLTRB(12, 0, 12, 12),
             child: Text(
-              "",
-              style: TextStyle(
+              project.subtitle,
+              style: const TextStyle(
                 fontSize: 10,
                 color: CustomColor.whiteSecondary,
               ),
@@ -61,7 +65,7 @@ class ProjectCardWidget extends StatelessWidget {
             ),
             child: Row(
               children: [
-                Text(
+                const Text(
                   "Ref Link :",
                   style: TextStyle(
                     color: CustomColor.yellowSecondary,
@@ -70,7 +74,9 @@ class ProjectCardWidget extends StatelessWidget {
                 ),
                 const Spacer(),
                 InkWell(
-                  onTap: () {},
+                  onTap: () {
+                    js.context.callMethod("open", [project.webLink]);
+                  },
                   child: Image.asset(
                     "assets/web_icon.png",
                     width: 19,

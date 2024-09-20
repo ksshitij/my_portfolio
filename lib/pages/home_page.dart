@@ -5,9 +5,15 @@ import 'package:my_portfolio/constants/nav_items.dart';
 import 'package:my_portfolio/constants/size.dart';
 import 'package:my_portfolio/constants/skill_items.dart';
 import 'package:my_portfolio/styles/style.dart';
+import 'package:my_portfolio/utils/project_utils.dart';
+import 'package:my_portfolio/widgets/contact_section.dart';
+import 'package:my_portfolio/widgets/custom_text_field.dart';
 import 'package:my_portfolio/widgets/drawer_mobile.dart';
+import 'package:my_portfolio/widgets/footer_widget.dart';
 import 'package:my_portfolio/widgets/main_desktop.dart';
 import 'package:my_portfolio/widgets/main_mobile.dart';
+import 'package:my_portfolio/widgets/project_card.dart';
+import 'package:my_portfolio/widgets/projects_section.dart';
 import 'package:my_portfolio/widgets/site_logo.dart';
 import 'package:my_portfolio/widgets/skills_desktop.dart';
 import 'package:my_portfolio/widgets/skills_mobile.dart';
@@ -89,42 +95,17 @@ class _HomePageState extends State<HomePage> {
                 ],
               ),
             ),
+
             //PROJECTS
-            Container(
-              width: screenWidth,
-              padding: const EdgeInsets.fromLTRB(25, 20, 25, 60),
-              child: Column(
-                children: [
-                  //PROJECT TITLES
-                  const Text(
-                    "PROJECTS",
-                    style: TextStyle(
-                      fontSize: 26,
-                      fontWeight: FontWeight.bold,
-                      color: CustomColor.whitePrimary,
-                    ),
-                  ),
-                  //PROJECT CARDS
-                  ProjectCardWidget(),
-                ],
-              ),
-            ),
+            const ProjectsSection(),
+            //sizedbox should be here if needed
             //CONTACTS
-            Container(
-              height: 500,
-              width: double.maxFinite,
-              color: Colors.blueGrey,
-            ),
+            ContactSection(),
             //FOOTER
-            Container(
-              height: 500,
-              width: double.maxFinite,
-            ),
+            FooterWidget(),
           ],
         ),
       );
     });
   }
 }
-
-
