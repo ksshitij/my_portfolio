@@ -7,13 +7,12 @@ class TitleDesktop extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Text(
-                    "What I Can Do",
-                    style: TextStyle(
-                      fontSize: 27,
-                      fontWeight: FontWeight.bold,
-                      color: CustomColor.whitePrimary,
-                    ),
-                  );
-                  
+      "What I Can Do",
+      style: TextStyle(
+        fontSize: 26,
+        fontWeight: FontWeight.bold,
+        color: CustomColor.whitePrimary,
+      ),
+    );
   }
 }

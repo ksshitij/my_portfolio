@@ -61,7 +61,7 @@ class _HomePageState extends State<HomePage> {
             Container(
               height: 490.0,
               width: screenWidth,
-              padding: EdgeInsets.fromLTRB(25, 20, 25, 60),
+              padding: const EdgeInsets.fromLTRB(25, 20, 25, 60),
               color: CustomColor.bgLight1,
               child: Column(
                 mainAxisSize: MainAxisSize.min,
@@ -91,8 +91,23 @@ class _HomePageState extends State<HomePage> {
             ),
             //PROJECTS
             Container(
-              height: 500,
-              width: double.maxFinite,
+              width: screenWidth,
+              padding: const EdgeInsets.fromLTRB(25, 20, 25, 60),
+              child: Column(
+                children: [
+                  //PROJECT TITLES
+                  const Text(
+                    "PROJECTS",
+                    style: TextStyle(
+                      fontSize: 26,
+                      fontWeight: FontWeight.bold,
+                      color: CustomColor.whitePrimary,
+                    ),
+                  ),
+                  //PROJECT CARDS
+                  ProjectCardWidget(),
+                ],
+              ),
             ),
             //CONTACTS
             Container(
@@ -111,3 +126,5 @@ class _HomePageState extends State<HomePage> {
     });
   }
 }
+
+
