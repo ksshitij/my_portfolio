@@ -5,4 +5,5 @@ class SnsLinks {
   static const String instagram = "https://www.instagram.com/_kshitiijjj/";
   static const String resume =
       "https://drive.google.com/file/d/1QDA7t0lvfWG0PRSma71lgo7HmDANtDq5/view?usp=sharing";
+  static const String leetcode = "https://leetcode.com/u/kshitijpatidar/";
 }

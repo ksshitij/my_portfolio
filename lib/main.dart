@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:my_portfolio/pages/home_page.dart';
 
+
 void main() {
   runApp(const MyApp());
 }
@@ -14,6 +15,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData.dark(),
+      
       title: 'Kshitij Patidar',
       home: const HomePage(),
     );

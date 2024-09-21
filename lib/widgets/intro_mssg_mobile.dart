@@ -10,7 +10,7 @@ class IntroMssgMobile extends StatefulWidget {
 }
 
 class _IntroMssgMobileState extends State<IntroMssgMobile> {
-  final String text = "Hi,\nI'm Kshitij Patidar\nA Software Developer";
+  final String text = "Hi,\nI'm Kshitij Patidar\nA Flutter Developer";
   String displayedText = ""; // No initial space
   late Timer _timer;
 

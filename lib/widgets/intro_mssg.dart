@@ -10,7 +10,7 @@ class IntroMssg extends StatefulWidget {
 }
 
 class _IntroMssgState extends State<IntroMssg> {
-  final String text = "Hi,\nI'm Kshitij Patidar\nA Software Developer";
+  final String text = "Hi,\nI'm Kshitij Patidar\nA Flutter Developer";
   String displayedText = "";
   late Timer _timer;
 

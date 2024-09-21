@@ -78,6 +78,7 @@ class _HomePageState extends State<HomePage> {
                 const MainMobile(),
 
               //SKILLS
+
               Container(
                 key: navbarKeys[1],
                 //height: 490.0,
@@ -87,6 +88,9 @@ class _HomePageState extends State<HomePage> {
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   children: [
+                    SizedBox(
+                      height: 20,
+                    ),
                     //TITLE
                     if (constraints.maxWidth >= kMedDesktopWidth)
                       const TitleDesktop()

@@ -16,8 +16,11 @@ class ContactSection extends StatelessWidget {
       color: CustomColor.bgLight1,
       child: Column(
         children: [
+          SizedBox(
+            height: 20,
+          ),
           const Text(
-            "GET IN TOUCH",
+            "Get In Touch",
             style: TextStyle(
               fontWeight: FontWeight.bold,
               fontSize: 24,
@@ -121,6 +124,15 @@ class ContactSection extends StatelessWidget {
                 child: Image.asset(
                   "assets/instagram.png",
                   width: 28,
+                ),
+              ),
+              InkWell(
+                onTap: () {
+                  js.context.callMethod('open', [SnsLinks.leetcode]);
+                },
+                child: Image.asset(
+                  "assets/leetcode.png",
+                  width: 24,
                 ),
               ),
             ],
