@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:my_portfolio/constants/colors.dart';
+import 'package:my_portfolio/widgets/intro_mssg_mobile.dart';
 
 class MainMobile extends StatelessWidget {
   const MainMobile({super.key});
@@ -40,15 +41,7 @@ class MainMobile extends StatelessWidget {
             height: 20,
           ),
           //intro message
-          const Text(
-            "Hi,\nI'm Kshitij Patidar\nA Software Developer",
-            style: TextStyle(
-              fontSize: 21.0,
-              height: 1.3,
-              fontWeight: FontWeight.bold,
-              color: CustomColor.whitePrimary,
-            ),
-          ),
+          IntroMssgMobile(),
           SizedBox(
             height: 15,
           ),

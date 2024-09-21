@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:my_portfolio/constants/colors.dart';
+import 'package:my_portfolio/widgets/intro_mssg.dart';
 
 class MainDesktop extends StatelessWidget {
   const MainDesktop({super.key});
@@ -22,15 +23,7 @@ class MainDesktop extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               //intro messege
-              const Text(
-                "Hi,\nI'm Kshitij Patidar\nA Software Developer",
-                style: TextStyle(
-                  fontSize: 26.0,
-                  height: 1.5,
-                  fontWeight: FontWeight.bold,
-                  color: CustomColor.whitePrimary,
-                ),
-              ),
+              IntroMssg(),
               SizedBox(
                 height: 15,
               ),
