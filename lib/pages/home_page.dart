@@ -80,7 +80,7 @@ class _HomePageState extends State<HomePage> {
               //SKILLS
               Container(
                 key: navbarKeys[1],
-                height: 490.0,
+                //height: 490.0,
                 width: screenWidth,
                 padding: const EdgeInsets.fromLTRB(25, 20, 25, 60),
                 color: CustomColor.bgLight1,
