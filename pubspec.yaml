@@ -39,6 +39,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   animated_text_kit: ^4.2.1 
   flutter_email_sender: ^5.0.2
+  emailjs: ^1.0.0
 
 dev_dependencies:
   flutter_test:
