@@ -31,12 +31,12 @@ const List<Map> skillItems = [
     "title": "Dart",
   },
   {
-    "img": "assets/html5.png",
-    "title": "HTML5",
+    "img": "assets/python.png",
+    "title": "Python",
   },
   {
-    "img": "assets/css3.png",
-    "title": "CSS3",
+    "img": "assets/js_logo.png",
+    "title": "JavaScript",
   },
   {
     "img": "assets/mysql_i.png",
@@ -47,7 +47,23 @@ const List<Map> skillItems = [
     "title": "Linux",
   },
   {
-    "img": "assets/Leetcode_logo.png",
-    "title": "DSA",
+    "img": "assets/react_logo.png",
+    "title": "React",
+  },
+  {
+    "img": "assets/docker_logo.png",
+    "title": "Docker",
+  },
+  {
+    "img": "assets/aws_logo.png",
+    "title": "AWS",
+  },
+  {
+    "img": "assets/django_logo.png",
+    "title": "Django",
+  },
+  {
+    "img": "assets/postman_logo.png",
+    "title": "Postman",
   },
 ];
